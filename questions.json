@@ -1,0 +1,188 @@
+{
+  "title": "Quiz du mariage - Jean David & Ilianaï",
+  "questions": [
+    {
+      "q": "Quel est le prénom complet de la mariée ?",
+      "o": [
+        "Ilianaï",
+        "Zurishadday Ilianaï",
+        "Iliana Zurishadday",
+        "Ilianaï Julien"
+      ],
+      "a": 1
+    },
+    {
+      "q": "Quel est le prénom du marié ?",
+      "o": [
+        "Jean David Julien",
+        "David Jean",
+        "Jean Julien Julien",
+        "David Joseph"
+      ],
+      "a": 0
+    },
+    {
+      "q": "Selon le message des mariés, qui est au centre de leur union ?",
+      "o": [
+        "La famille",
+        "Les amis",
+        "Dieu",
+        "Le ministère"
+      ],
+      "a": 2
+    },
+    {
+      "q": "Quel verset est associé à leur histoire dans le formulaire ?",
+      "o": [
+        "Jean 3:16",
+        "Proverbes 18:22",
+        "Psaume 23",
+        "Galates 5:22"
+      ],
+      "a": 1
+    },
+    {
+      "q": "Complétez : « Celui qui trouve une compagne… »",
+      "o": [
+        "trouve la richesse",
+        "trouve le bonheur",
+        "trouve la paix",
+        "trouve la victoire"
+      ],
+      "a": 1
+    },
+    {
+      "q": "À quelle date Jean David & Ilianaï se marient-ils ?",
+      "o": [
+        "19 septembre 2026",
+        "25 septembre 2026",
+        "26 septembre 2026",
+        "27 septembre 2026"
+      ],
+      "a": 2
+    },
+    {
+      "q": "À quelle heure la cérémonie était-elle prévue ?",
+      "o": [
+        "14h30",
+        "15h00",
+        "15h30",
+        "16h00"
+      ],
+      "a": 1
+    },
+    {
+      "q": "Où a eu lieu la bénédiction nuptiale ?",
+      "o": [
+        "Impact Centre",
+        "Centre Chrétien",
+        "Impact Montréal",
+        "Impact Centre Chrétien Montréal"
+      ],
+      "a": 3
+    },
+    {
+      "q": "Quel est le code vestimentaire indiqué dans le formulaire ?",
+      "o": [
+        "Tout blanc",
+        "Noir et or",
+        "Casual chic, toutes couleurs",
+        "Tenue traditionnelle uniquement"
+      ],
+      "a": 2
+    },
+    {
+      "q": "Lequel de ces plats fait partie des choix proposés aux invités ?",
+      "o": [
+        "Filet de saumon, sauce au poivron",
+        "Steak frites",
+        "Poulet BBQ",
+        "Crevettes à l'ail"
+      ],
+      "a": 0
+    },
+    {
+      "q": "Lequel est une option végétarienne du menu ?",
+      "o": [
+        "Aubergine au parmesan",
+        "Lasagne",
+        "Pizza végétarienne",
+        "Salade César"
+      ],
+      "a": 0
+    },
+    {
+      "q": "Qui a fait le premier pas ?",
+      "o": [
+        "Jean David",
+        "Ilianaï"
+      ],
+      "a": 0
+    },
+    {
+      "q": "Qui est le plus susceptible de dire « attends, j'ai une idée » ?",
+      "o": [
+        "Jean David",
+        "Ilianaï"
+      ],
+      "a": 0
+    },
+    {
+      "q": "Qui est le plus ponctuel ?",
+      "o": [
+        "Jean David",
+        "Ilianaï"
+      ],
+      "a": 0
+    },
+    {
+      "q": "Qui parle le plus ?",
+      "o": [
+        "Jean David",
+        "Ilianaï",
+        "Ça dépend du sujet",
+        "Les deux en même temps 😂"
+      ],
+      "a": 2
+    },
+    {
+      "q": "Qui est le plus romantique ?",
+      "o": [
+        "Jean David",
+        "Ilianaï",
+        "Les deux"
+      ],
+      "a": 0
+    },
+    {
+      "q": "Qui risque le plus de pleurer pendant la cérémonie ?",
+      "o": [
+        "Jean David",
+        "Ilianaï",
+        "Les deux",
+        "La famille"
+      ],
+      "a": 1
+    },
+    {
+      "q": "Dans Galates 5:22, quel élément fait partie du fruit de l'Esprit ?",
+      "o": [
+        "Plénitude",
+        "Amour",
+        "Richesse",
+        "Succès"
+      ],
+      "a": 1
+    },
+    {
+      "q": "Combien d'éléments sont traditionnellement énumérés dans le fruit de l'Esprit de Galates 5:22-23 ?",
+      "o": [
+        "7",
+        "9",
+        "10",
+        "12"
+      ],
+      "a": 1
+    }
+  ]
+}

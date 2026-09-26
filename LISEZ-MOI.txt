@@ -1,0 +1,130 @@
+========================================
+  QUIZ LOCAL (type Kahoot) - MODE D'EMPLOI
+========================================
+
+Cette app tourne sur TON ordinateur. Les telephones se connectent
+par le MEME WiFi. Aucun compte, aucun cout, aucune connexion Internet
+requise pendant la partie.
+
+------------------------------------------------
+1) INSTALLER NODE.JS (une seule fois)
+------------------------------------------------
+Va sur https://nodejs.org et installe la version "LTS".
+
+------------------------------------------------
+2) DEMARRER
+------------------------------------------------
+- Windows : double-clique sur "Demarrer-Windows.bat"
+- Mac     : double-clique sur "demarrer-mac.command"
+  (si Mac bloque : clic droit > Ouvrir la premiere fois)
+
+La 1re fois seulement, il telecharge les composants (necessite Internet).
+Ensuite, ca marche hors ligne.
+
+Une fenetre noire s'ouvre et affiche 2 adresses :
+- Ecran animateur (cet ordinateur) : http://localhost:3000
+- Telephones (meme WiFi)           : http://192.168.x.x:3000/play
+
+------------------------------------------------
+3) ANIMER LA PARTIE
+------------------------------------------------
+- Sur l'ordinateur (projete si possible), ouvre http://localhost:3000
+  Un CODE PIN et un QR code s'affichent.
+- Les invites, connectes au MEME WiFi, scannent le QR (ou tapent
+  l'adresse http://192.168.x.x:3000/play), entrent le PIN et leur prenom.
+- Quand tout le monde est la, clique "Demarrer la partie".
+- A chaque question : chacun repond sur son telephone et voit tout de
+  suite si c'est juste. Le classement s'affiche entre les questions.
+- A la fin : podium des 3 premiers sur l'ecran principal.
+
+------------------------------------------------
+4) CHANGER LES QUESTIONS
+------------------------------------------------
+Ouvre le fichier "questions.json" avec un editeur de texte.
+Format :
+{
+  "title": "Nom du quiz",
+  "questions": [
+    { "q": "Ta question ?", "o": ["Option A","Option B","Option C","Option D"], "a": 1 }
+  ]
+}
+- "o" = les options (2 a 4).
+- "a" = le NUMERO de la bonne reponse en commencant a 0
+        (0 = A, 1 = B, 2 = C, 3 = D).
+Enregistre, puis relance l'app.
+
+------------------------------------------------
+IMPORTANT - LE WiFi
+------------------------------------------------
+- Ordinateur ET telephones doivent etre sur le MEME reseau WiFi.
+- A la maison : ca marche directement.
+- Certains WiFi publics/d'eglise bloquent la communication entre
+  appareils ("isolation des clients"). Si les telephones n'arrivent
+  pas a se connecter :
+  -> Cree un PARTAGE DE CONNEXION (hotspot) avec ton telephone,
+     connecte l'ordinateur ET les invites a ce hotspot, et relance.
+- Sous Windows, autorise Node.js dans le pare-feu si on te le demande.
+
+Pour arreter : ferme la fenetre noire.
+
+------------------------------------------------
+NOUVEAU : IMPORTER DES QUESTIONS SANS TOUCHER AU JSON
+------------------------------------------------
+Sur l'ecran animateur (page d'accueil), en bas :
+- "Modele Excel" : telecharge un fichier a remplir.
+- "Importer un fichier Excel/CSV" : charge ton fichier, les questions
+  remplacent aussitot celles en cours (pas besoin de redemarrer).
+Colonnes attendues : Question, Option A, B, C, D, Bonne reponse
+(lettre A-D ou numero 1-4), Image (facultatif).
+
+Astuce : tu peux aussi simplement deposer un fichier nomme
+"questions.xlsx" (ou "questions.csv") a cote de server.js : il sera
+charge automatiquement au demarrage, a la place de questions.json.
+
+------------------------------------------------
+NOUVEAU : IMAGES
+------------------------------------------------
+Ajoute une image a une question via la colonne "Image" (ou le champ
+"img" dans questions.json). Mets le nom du fichier (depose dans le
+dossier public/images) ou une adresse web. L'image s'affiche sur
+l'ecran animateur.
+
+------------------------------------------------
+NOUVEAU : SON
+------------------------------------------------
+Sons de bonne/mauvaise reponse (cote joueur), compte a rebours et
+revelation (cote animateur). Bouton en haut a droite pour couper le son.
+
+==================================================
+  METTRE LE QUIZ EN LIGNE (gratuit) AVEC RENDER
+==================================================
+Utile si tu ne veux pas installer Node, ou si les invites ne sont pas
+sur le meme WiFi. Netlify/Vercel NE marchent PAS pour ce type d'app.
+Render, oui (gratuit, sans carte de credit).
+
+Etapes :
+1. Cree un compte gratuit sur https://github.com
+2. Cree un nouveau "repository" (bouton New), nomme-le par ex. quiz-fi,
+   coche "Public", puis "Create repository".
+3. Sur la page du repo : "Add file" > "Upload files".
+   Glisse-depose TOUT le contenu du dossier quizlocal
+   (server.js, package.json, render.yaml, questions.json, et le
+   dossier public). N'inclus PAS node_modules.
+   Puis "Commit changes".
+4. Cree un compte gratuit sur https://render.com (connecte-toi avec GitHub).
+5. Dans Render : "New +" > "Web Service" > choisis ton repo quiz-fi.
+   Render detecte Node automatiquement :
+     - Build command : npm install
+     - Start command : node server.js
+     - Instance type : Free
+   Clique "Create Web Service".
+6. Apres quelques minutes, tu obtiens une adresse du type
+   https://quiz-fi.onrender.com
+   Ouvre-la : c'est ton ecran animateur. Le QR et le lien pour les
+   joueurs pointent automatiquement vers cette adresse publique.
+
+A SAVOIR (offre gratuite Render) :
+- Le service s'endort apres ~15 min sans activite ; le reveil prend
+  ~1 minute. Ouvre donc l'app 2-3 minutes AVANT la soiree, et fais
+  une premiere requete pour le reveiller.
+- 750 heures gratuites par mois (large).
