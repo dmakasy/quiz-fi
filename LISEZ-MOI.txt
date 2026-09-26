@@ -1,0 +1,5 @@
+Depose ici tes images (jpg, png).
+Dans questions.json ou dans ta colonne "Image" du fichier Excel,
+mets juste le nom du fichier, par exemple : colombe.jpg
+L'image s'affiche sur l'ecran de l'animateur pendant la question.
+Tu peux aussi mettre une adresse web complete (https://...).
